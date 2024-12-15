@@ -69,8 +69,6 @@ params = {'learning_rate': 0.2, 'max_depth': 2, 'n_estimators': 200, 'subsample'
 model = XGBClassifier(**params)
 model.fit(X_train, y_train)
 
-
-
 # Streamlit app for real-time fraud detection
 st.title("Credit Card Fraud Detection Model")
 st.write("Enter the following features to check if the transaction is legitimate or fraudulent:")
