@@ -84,6 +84,7 @@ print(balanced_df.columns.tolist())
 print("Is fraud count on the balanced dataset")
 print(balanced_df['is_fraud'].value_counts())
 
+
 # Split the balanced data into features (X) and target (y)
 X = balanced_df.drop('is_fraud', axis=1)
 y = balanced_df['is_fraud']
@@ -156,6 +157,7 @@ def display_test_results(model_name, model):
 
     return None
 
+
 # Random Forest
 
 # Importing random forest classifier
@@ -173,7 +175,9 @@ random_forest_model.fit(X_train, y_train)
 display_test_results("Random Forest", random_forest_model)
 
 
+
 #decision tree classifier
+
 # Importing decision tree classifier
 from sklearn.tree import DecisionTreeClassifier
 # Instantiate the decision tree model
@@ -189,8 +193,10 @@ display_test_results("Decision Tree", decision_tree_model)
 
 
 #xgboost
+
 # Importing XGBoost
 from xgboost import XGBClassifier
+
 # Specify XGBoost parameters
 params = {
     'learning_rate': 0.2,
@@ -209,6 +215,7 @@ display_test_results("XGBoost", xgb_model)
 
 
 #logistic regression
+
 # Importing logistic regression
 from sklearn.linear_model import LogisticRegression
 # Instantiate the logistic regression model
@@ -225,6 +232,7 @@ display_test_results("Logistic Regression", logistic_model)
 
 
 #naive bayes
+
 #Importing GaussianNB
 from sklearn.naive_bayes import GaussianNB
 # Instantiate the GaussianNB
@@ -233,3 +241,6 @@ nb_model = GaussianNB()
 nb_model.fit(X_train, y_train)
 # Display results
 display_test_results("Naive Bayes", nb_model)
+
+
+
